@@ -1,0 +1,45 @@
+{% extends "TwitterBootstrapBundle::layout.html.twig" %}
+
+{% block container -%}
+    {% include 'FDevsCRUDBundle:Default:menu.html.twig' %}
+    <h1>Author</h1>
+
+    <table class="record_properties">
+        <tbody>
+            <tr>
+                <th>Fname</th>
+                <td>{{ entity.fname }}</td>
+            </tr>
+            <tr>
+                <th>Lname</th>
+                <td>{{ entity.lname }}</td>
+            </tr>
+            <tr>
+                <th>Birthday</th>
+                <td>{{ entity.birthday|date('Y-m-d H:i:s') }}</td>
+            </tr>
+            <tr>
+                <th>About</th>
+                <td>{{ entity.about }}</td>
+            </tr>
+            <tr>
+                <th>Id</th>
+                <td>{{ entity.id }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('author') }}">
+            Back to the list
+        </a>
+    </li>
+    <li>
+        <a href="{{ path('author_edit', { 'id': entity.id }) }}">
+            Edit
+        </a>
+    </li>
+    <li>{{ form(delete_form) }}</li>
+</ul>
+{% endblock %}

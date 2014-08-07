@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity repository-class="FDevs\CRUDBundle\Entity\AuthorRepository" name="FDevs\CRUDBundle\Entity\Author">
+    <id name="id" type="integer" column="id">
+      <generator strategy="AUTO"/>
+    </id>
+    <field name="fname" type="string" column="fname" length="255"/>
+    <field name="lname" type="string" column="lname" length="255"/>
+    <field name="birthday" type="date" column="birthday"/>
+    <field name="about" type="text" column="about"/>
+  </entity>
+</doctrine-mapping>

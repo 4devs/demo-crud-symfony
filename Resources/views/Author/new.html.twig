@@ -1,0 +1,16 @@
+{% extends "TwitterBootstrapBundle::layout.html.twig" %}
+
+{% block container -%}
+    {% include 'FDevsCRUDBundle:Default:menu.html.twig' %}
+    <h1>Author creation</h1>
+
+    {{ form(form) }}
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('author') }}">
+            Back to the list
+        </a>
+    </li>
+</ul>
+{% endblock %}
